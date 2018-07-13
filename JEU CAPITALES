@@ -1,0 +1,12 @@
+def print_score(nom, score):
+    print(nom + " : " + str(score) + " points")
+intro=input("Bienvenue au jeu des 50 capitales ! Pour commencer, rentrez votre nom. PS : A tout les L, STMG et PRO, passez votre chemin. Bonne chance ! ")
+score=0
+capitales = {"maroc":"Rabat", "espagne":"Madrid", "france":"Paris", "Portugal":"Lisbonne", "colombie":"Bogota", "Népal":"Katmandou", "Etats-unis":"Washington", "Malaisie":"Kuala lumpur", "Uruguay":"Montevideo", "Venezuela":"Sucre", "Equateur":"Quito", "Argentine":"Buenos aires", "Biélorussie":"Minsk", "Pologne":"Varsovie", "Tanzanie":"Dar es salaam", "Kenya":"Nairobie", "Côte d'ivoire":"Abidjan", "Chine":"Pékin", "Japon":"Tokyo", "Angleterre":"Londres", "Mauritanie":"Khartoum", "Afrique du sud":"Pretoria", "Afghanistan":"Kaboul", "Autriche":"Vienne", "Burkina Faso":"Ouagadougou", "Canada":"Ottawa", "Chili":"Santiago", "Congo":"Brazzaville", "Corée du Nord":"Pyongyang", "Corée du Sud":"Séoul", "Danemark":"Copenhague", "Finlande":"Helsinki", "Grèce":"Athènes", "Hongrie":"Budapest", "Inde":"New Delhi", "Indonésie":"Jakarta", "Irak":"Bagdad", "Iran":"Téhéran", "Irlande":"Dublin", "Islande":"Reykjavik", "Israël":"Jérusalem", "Italie":"Rome", "Jamaïque":"Kingston", "Kazakhstan":"Astana", "Kirghizistan":"Bichkek", "Koweït":"Koweït", "Lettonie":"Riga", "Turkménistan":"Achgabat", "Tadjikistan":"Douchanbe", "Liechtenstein":"Vaduz"}
+for pays in capitales.keys():
+    ville=input(" Capitale du pays "+ pays + " ? ")
+    if(ville)==capitales[pays]:
+        print(" Bonne réponse ")
+        score+=1
+    else: print("Mauvaise réponse")
+    print_score(intro, score)
